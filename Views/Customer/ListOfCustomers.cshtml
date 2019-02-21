@@ -1,0 +1,25 @@
+﻿@model Videly.ViewModel.RandomViewModel
+    
+@{
+    ViewBag.Title = "ListOfCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List Of Customers</h2>
+@*<ul>
+    @foreach (var customer in Model.Customer)
+    {
+        <li>@Html.ActionLink(customer.Name, "CustomerDetails", new { id = customer.Id }, null)</li>
+
+
+    }
+</ul>*@
+<ul class="list-group">
+    @foreach (var customer in Model.Customer)
+    {
+        <li class="list-group-item disabled">@Html.ActionLink(customer.Name, "CustomerDetails", new { id = customer.Id }, null)</li>
+
+    }
+
+    
+</ul>
